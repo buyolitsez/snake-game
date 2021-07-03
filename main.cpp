@@ -1,11 +1,11 @@
 #include <SFML/Graphics.hpp>
+#include "map.h"
+#include <bits/stdc++.h>
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(400, 400), "snake game");
-    sf::CircleShape shape(200.f);
-    shape.setFillColor(sf::Color::Blue);
-
+    sf::RenderWindow window(sf::VideoMode(1024, 768), "snake game");
+    std::cout << std::__gcd(1024, 768);
     while (window.isOpen())
     {
         sf::Event event;
@@ -16,7 +16,7 @@ int main()
         }
 
         window.clear();
-        window.draw(shape);
+        DrawMap(window);
         window.display();
     }
     return 0;

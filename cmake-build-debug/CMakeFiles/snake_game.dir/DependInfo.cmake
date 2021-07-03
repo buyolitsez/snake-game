@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/buyolitsez/CLionProjects/snake-game/main.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/main.cpp.o"
+  "/home/buyolitsez/CLionProjects/snake-game/map.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/map.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

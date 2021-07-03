@@ -9,4 +9,18 @@
 /home/buyolitsez/CLionProjects/snake-game/main.cpp
 SFML/Graphics.hpp
 -
+map.h
+/home/buyolitsez/CLionProjects/snake-game/map.h
+bits/stdc++.h
+-
+
+/home/buyolitsez/CLionProjects/snake-game/map.cpp
+SFML/Graphics.hpp
+-
+map.h
+/home/buyolitsez/CLionProjects/snake-game/map.h
+
+/home/buyolitsez/CLionProjects/snake-game/map.h
+SFML/Graphics.hpp
+-
 

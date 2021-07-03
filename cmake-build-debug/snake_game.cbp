@@ -85,6 +85,12 @@
 		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/main.cpp">
 			<Option target="snake_game"/>
 		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/map.cpp">
+			<Option target="snake_game"/>
+		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/map.h">
+			<Option target="snake_game"/>
+		</Unit>
 		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
