@@ -91,6 +91,24 @@
 		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/map.h">
 			<Option target="snake_game"/>
 		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/partOfSnake.cpp">
+			<Option target="snake_game"/>
+		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/partOfSnake.h">
+			<Option target="snake_game"/>
+		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/snake.cpp">
+			<Option target="snake_game"/>
+		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/snake.h">
+			<Option target="snake_game"/>
+		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/snakeHead.cpp">
+			<Option target="snake_game"/>
+		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/snakeHead.h">
+			<Option target="snake_game"/>
+		</Unit>
 		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

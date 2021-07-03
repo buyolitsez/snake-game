@@ -5,6 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
 
-add_executable(snake_game main.cpp map.h map.cpp)
+add_executable(snake_game main.cpp map.h map.cpp partOfSnake.h partOfSnake.cpp snake.h snake.cpp snakeHead.h snakeHead.cpp)
 
 target_link_libraries(snake_game sfml-graphics sfml-audio)

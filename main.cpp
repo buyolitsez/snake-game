@@ -1,11 +1,9 @@
 #include <SFML/Graphics.hpp>
 #include "map.h"
-#include <bits/stdc++.h>
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(1024, 768), "snake game");
-    std::cout << std::__gcd(1024, 768);
     while (window.isOpen())
     {
         sf::Event event;
@@ -14,7 +12,6 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-
         window.clear();
         DrawMap(window);
         window.display();

@@ -11,8 +11,6 @@ SFML/Graphics.hpp
 -
 map.h
 /home/buyolitsez/CLionProjects/snake-game/map.h
-bits/stdc++.h
--
 
 /home/buyolitsez/CLionProjects/snake-game/map.cpp
 SFML/Graphics.hpp
@@ -23,4 +21,36 @@ map.h
 /home/buyolitsez/CLionProjects/snake-game/map.h
 SFML/Graphics.hpp
 -
+snake.h
+/home/buyolitsez/CLionProjects/snake-game/snake.h
+
+/home/buyolitsez/CLionProjects/snake-game/partOfSnake.cpp
+partOfSnake.h
+/home/buyolitsez/CLionProjects/snake-game/partOfSnake.h
+
+/home/buyolitsez/CLionProjects/snake-game/partOfSnake.h
+SFML/Graphics.hpp
+-
+map.h
+/home/buyolitsez/CLionProjects/snake-game/map.h
+snake.h
+/home/buyolitsez/CLionProjects/snake-game/snake.h
+
+/home/buyolitsez/CLionProjects/snake-game/snake.cpp
+snake.h
+/home/buyolitsez/CLionProjects/snake-game/snake.h
+
+/home/buyolitsez/CLionProjects/snake-game/snake.h
+vector
+-
+partOfSnake.h
+/home/buyolitsez/CLionProjects/snake-game/partOfSnake.h
+
+/home/buyolitsez/CLionProjects/snake-game/snakeHead.cpp
+snakeHead.h
+/home/buyolitsez/CLionProjects/snake-game/snakeHead.h
+
+/home/buyolitsez/CLionProjects/snake-game/snakeHead.h
+partOfSnake.h
+/home/buyolitsez/CLionProjects/snake-game/partOfSnake.h
 

@@ -6,6 +6,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/buyolitsez/CLionProjects/snake-game/main.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/main.cpp.o"
   "/home/buyolitsez/CLionProjects/snake-game/map.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/map.cpp.o"
+  "/home/buyolitsez/CLionProjects/snake-game/partOfSnake.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/partOfSnake.cpp.o"
+  "/home/buyolitsez/CLionProjects/snake-game/snake.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/snake.cpp.o"
+  "/home/buyolitsez/CLionProjects/snake-game/snakeHead.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/snakeHead.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

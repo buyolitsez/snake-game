@@ -196,6 +196,87 @@ map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/map.cpp.s
 .PHONY : map.cpp.s
 
+partOfSnake.o: partOfSnake.cpp.o
+
+.PHONY : partOfSnake.o
+
+# target to build an object file
+partOfSnake.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/partOfSnake.cpp.o
+.PHONY : partOfSnake.cpp.o
+
+partOfSnake.i: partOfSnake.cpp.i
+
+.PHONY : partOfSnake.i
+
+# target to preprocess a source file
+partOfSnake.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/partOfSnake.cpp.i
+.PHONY : partOfSnake.cpp.i
+
+partOfSnake.s: partOfSnake.cpp.s
+
+.PHONY : partOfSnake.s
+
+# target to generate assembly for a file
+partOfSnake.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/partOfSnake.cpp.s
+.PHONY : partOfSnake.cpp.s
+
+snake.o: snake.cpp.o
+
+.PHONY : snake.o
+
+# target to build an object file
+snake.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/snake.cpp.o
+.PHONY : snake.cpp.o
+
+snake.i: snake.cpp.i
+
+.PHONY : snake.i
+
+# target to preprocess a source file
+snake.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/snake.cpp.i
+.PHONY : snake.cpp.i
+
+snake.s: snake.cpp.s
+
+.PHONY : snake.s
+
+# target to generate assembly for a file
+snake.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/snake.cpp.s
+.PHONY : snake.cpp.s
+
+snakeHead.o: snakeHead.cpp.o
+
+.PHONY : snakeHead.o
+
+# target to build an object file
+snakeHead.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/snakeHead.cpp.o
+.PHONY : snakeHead.cpp.o
+
+snakeHead.i: snakeHead.cpp.i
+
+.PHONY : snakeHead.i
+
+# target to preprocess a source file
+snakeHead.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/snakeHead.cpp.i
+.PHONY : snakeHead.cpp.i
+
+snakeHead.s: snakeHead.cpp.s
+
+.PHONY : snakeHead.s
+
+# target to generate assembly for a file
+snakeHead.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/snakeHead.cpp.s
+.PHONY : snakeHead.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -211,6 +292,15 @@ help:
 	@echo "... map.o"
 	@echo "... map.i"
 	@echo "... map.s"
+	@echo "... partOfSnake.o"
+	@echo "... partOfSnake.i"
+	@echo "... partOfSnake.s"
+	@echo "... snake.o"
+	@echo "... snake.i"
+	@echo "... snake.s"
+	@echo "... snakeHead.o"
+	@echo "... snakeHead.i"
+	@echo "... snakeHead.s"
 .PHONY : help
 
 
