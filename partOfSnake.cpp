@@ -1,8 +1,6 @@
-//
-// Created by buyolitsez on 7/3/21.
-//
 
 #include "partOfSnake.h"
+
 
 partOfSnake::partOfSnake(int X, int Y, sf::String FileName) {
     file = FileName;
@@ -10,7 +8,6 @@ partOfSnake::partOfSnake(int X, int Y, sf::String FileName) {
     texture.loadFromImage(image);
     sprite.setTexture(texture);
     x = X; y = Y;
-//    snakeParts.emplace_back(*this);
 }
 
 void partOfSnake::Update(float time) {
@@ -20,5 +17,9 @@ void partOfSnake::Update(float time) {
 }
 
 void partOfSnake::Draw(sf::RenderWindow& window) {
+    window.draw(this->sprite);
+}
+
+void DrawSnake(sf::RenderWindow& window) {
 
 }

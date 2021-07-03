@@ -1,8 +1,4 @@
-//
-// Created by buyolitsez on 7/3/21.
-//
 
-#include <SFML/Graphics.hpp>
 #include "map.h"
 
 void DrawMap(sf::RenderWindow& window) {

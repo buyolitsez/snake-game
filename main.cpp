@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "map.h"
+#include "partOfSnake.h"
 
 int main()
 {
@@ -14,6 +15,7 @@ int main()
         }
         window.clear();
         DrawMap(window);
+        DrawSnake(window);
         window.display();
     }
     return 0;
