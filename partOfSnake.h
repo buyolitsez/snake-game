@@ -1,9 +1,9 @@
 #pragma once
 
-
 #include <SFML/Graphics.hpp>
 #include "map.h"
 #include <vector>
+
 
 class partOfSnake {
 public:
@@ -18,3 +18,5 @@ public:
 };
 
 void DrawSnake(sf::RenderWindow& window);
+
+extern std::vector<partOfSnake*> snakeParts;

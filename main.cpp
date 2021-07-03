@@ -15,6 +15,8 @@ int main()
         }
         window.clear();
         DrawMap(window);
+        partOfSnake a(0, 0, "head_square.png");
+        partOfSnake b(0, 1, "tail_square.png");
         DrawSnake(window);
         window.display();
     }

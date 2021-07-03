@@ -9,4 +9,3 @@ const int SIZEONESQUARE = 64;
 
 void DrawMap(sf::RenderWindow& window);
 
-void DrawSnake(sf::RenderWindow& window);

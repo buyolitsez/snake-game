@@ -15,9 +15,3 @@ void DrawMap(sf::RenderWindow& window) {
     }
 }
 
-void DrawSnake(sf::RenderWindow& window) {
-//    for (auto &u : snakeParts) {
-//        u->Draw(window);
-//    }
-}
-
