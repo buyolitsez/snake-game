@@ -37,3 +37,7 @@ extern std::vector<PartOfSnake> snakeParts;
 void updateSnake(float time);
 
 void changeDirHead(Direction dir);
+
+Direction reverse(Direction dir);
+
+bool checkDir(int dx, int dy);

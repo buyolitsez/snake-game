@@ -62,24 +62,32 @@ void updateSnake(float time) {
     snakeParts[0].update(time);
 }
 
+bool checkDir(int dx, int dy) {
+    return !(snakeParts.size() > 1 && snakeParts[0].x + dx == snakeParts[1].x && snakeParts[0].y + dy == snakeParts[1].y);
+}
 
 void changeDirHead(Direction dir) {
     if (snakeParts[0].dir == dir) {
         return;
     }
-    snakeParts[0].dir = dir;
-    if (dir == Direction::Left) {
+    bool changed = true;
+    if (dir == Direction::Left && checkDir(-1, 0)) {
         snakeParts[0].dx = -1;
         snakeParts[0].dy = 0;
-    } else if (dir == Direction::Right) {
+    } else if (dir == Direction::Right && checkDir(1, 0)) {
         snakeParts[0].dx = 1;
         snakeParts[0].dy = 0;
-    } else if (dir == Direction::Up) {
+    } else if (dir == Direction::Up && checkDir(0, -1)) {
         snakeParts[0].dx = 0;
         snakeParts[0].dy = -1;
-    } else {
+    } else if (dir == Direction::Down && checkDir(0, 1)) {
         snakeParts[0].dx = 0;
         snakeParts[0].dy = 1;
+    } else {
+        changed = false;
     }
-    snakeParts[0].correctRotation();
+    if (changed) {
+        snakeParts[0].dir = dir;
+        snakeParts[0].correctRotation();
+    }
 }
