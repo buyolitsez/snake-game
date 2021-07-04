@@ -19,16 +19,18 @@ partOfSnake::partOfSnake(int X, int Y, sf::String FileName) {
 void partOfSnake::Update(float t) {
     time += t;
     if (time >= TimeToUpdate) {
-        x += dx;
-        y += dy;
-        if (x == WIDTH) {
-            x = 0;
+        if (dx == 0 && dy == 0) {return;}
+        for (int i = int(snakeParts.size()) - 1; i > 0; --i) {
+            snakeParts[i]->x = snakeParts[i - 1]->x;
+            snakeParts[i]->y = snakeParts[i - 1]->y;
+            snakeParts[i]->dir = snakeParts[i - 1]->dir;
+            snakeParts[i]->CorrectRotation();
+            snakeParts[i]->sprite.setPosition(snakeParts[i]->x * SIZEONESQUARE, snakeParts[i]->y * SIZEONESQUARE);
         }
-        if (y == HEIGHT) {
-            y = 0;
-        }
+        x = (x + dx + WIDTH) % WIDTH;
+        y = (y + dy + HEIGHT) % HEIGHT;
         sprite.setPosition(x * SIZEONESQUARE, y * SIZEONESQUARE);
-        time -= TimeToUpdate;
+        time = 0;
     }
 }
 
@@ -57,9 +59,7 @@ void DrawSnake(sf::RenderWindow& window) {
 }
 
 void UpdateSnake(float time) {
-    for (auto part : snakeParts) {
-        part->Update(time);
-    }
+    snakeParts[0]->Update(time);
 }
 
 
