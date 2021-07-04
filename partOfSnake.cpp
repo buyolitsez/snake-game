@@ -1,7 +1,7 @@
 
 #include "partOfSnake.h"
 
-std::vector<partOfSnake*> snakeParts;
+std::vector<partOfSnake> snakeParts;
 
 
 partOfSnake::partOfSnake(int X, int Y, sf::String FileName) {
@@ -13,7 +13,7 @@ partOfSnake::partOfSnake(int X, int Y, sf::String FileName) {
     time = 0;
     dir = Up;
     sprite.setPosition(x * SIZEONESQUARE, y * SIZEONESQUARE);
-    snakeParts.emplace_back(this);
+    snakeParts.emplace_back(*this);
 }
 
 void partOfSnake::Update(float t) {
@@ -21,11 +21,11 @@ void partOfSnake::Update(float t) {
     if (time >= TimeToUpdate) {
         if (dx == 0 && dy == 0) {return;}
         for (int i = int(snakeParts.size()) - 1; i > 0; --i) {
-            snakeParts[i]->x = snakeParts[i - 1]->x;
-            snakeParts[i]->y = snakeParts[i - 1]->y;
-            snakeParts[i]->dir = snakeParts[i - 1]->dir;
-            snakeParts[i]->CorrectRotation();
-            snakeParts[i]->sprite.setPosition(snakeParts[i]->x * SIZEONESQUARE, snakeParts[i]->y * SIZEONESQUARE);
+            snakeParts[i].x = snakeParts[i - 1].x;
+            snakeParts[i].y = snakeParts[i - 1].y;
+            snakeParts[i].dir = snakeParts[i - 1].dir;
+            snakeParts[i].CorrectRotation();
+            snakeParts[i].sprite.setPosition(snakeParts[i].x * SIZEONESQUARE, snakeParts[i].y * SIZEONESQUARE);
         }
         x = (x + dx + WIDTH) % WIDTH;
         y = (y + dy + HEIGHT) % HEIGHT;
@@ -53,33 +53,33 @@ void partOfSnake::Draw(sf::RenderWindow& window) {
 
 
 void DrawSnake(sf::RenderWindow& window) {
-    for (auto part : snakeParts) {
-        part->Draw(window);
+    for (auto &part : snakeParts) {
+        part.Draw(window);
     }
 }
 
 void UpdateSnake(float time) {
-    snakeParts[0]->Update(time);
+    snakeParts[0].Update(time);
 }
 
 
 void ChangeDirHead(Direction dir) {
-    if (snakeParts[0]->dir == dir) {
+    if (snakeParts[0].dir == dir) {
         return;
     }
-    snakeParts[0]->dir = dir;
+    snakeParts[0].dir = dir;
     if (dir == Direction::Left) {
-        snakeParts[0]->dx = -1;
-        snakeParts[0]->dy = 0;
+        snakeParts[0].dx = -1;
+        snakeParts[0].dy = 0;
     } else if (dir == Direction::Right) {
-        snakeParts[0]->dx = 1;
-        snakeParts[0]->dy = 0;
+        snakeParts[0].dx = 1;
+        snakeParts[0].dy = 0;
     } else if (dir == Direction::Up) {
-        snakeParts[0]->dx = 0;
-        snakeParts[0]->dy = -1;
+        snakeParts[0].dx = 0;
+        snakeParts[0].dy = -1;
     } else {
-        snakeParts[0]->dx = 0;
-        snakeParts[0]->dy = 1;
+        snakeParts[0].dx = 0;
+        snakeParts[0].dy = 1;
     }
-    snakeParts[0]->CorrectRotation();
+    snakeParts[0].CorrectRotation();
 }

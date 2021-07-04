@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/fruit.cpp">
+			<Option target="snake_game"/>
+		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/fruit.h">
+			<Option target="snake_game"/>
+		</Unit>
 		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/main.cpp">
 			<Option target="snake_game"/>
 		</Unit>

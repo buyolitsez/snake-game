@@ -142,6 +142,33 @@ snake_game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/build
 .PHONY : snake_game/fast
 
+fruit.o: fruit.cpp.o
+
+.PHONY : fruit.o
+
+# target to build an object file
+fruit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/fruit.cpp.o
+.PHONY : fruit.cpp.o
+
+fruit.i: fruit.cpp.i
+
+.PHONY : fruit.i
+
+# target to preprocess a source file
+fruit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/fruit.cpp.i
+.PHONY : fruit.cpp.i
+
+fruit.s: fruit.cpp.s
+
+.PHONY : fruit.s
+
+# target to generate assembly for a file
+fruit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/fruit.cpp.s
+.PHONY : fruit.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -232,6 +259,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... snake_game"
+	@echo "... fruit.o"
+	@echo "... fruit.i"
+	@echo "... fruit.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

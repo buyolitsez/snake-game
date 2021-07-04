@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "map.h"
 #include "partOfSnake.h"
+#include "fruit.h"
 
 void ChangeDir() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
@@ -24,10 +25,8 @@ int main()
     sf::Clock clock;
 
     partOfSnake head(0, 0, "head_square");
-    partOfSnake tail1(0, 1, "tail_square");
-    partOfSnake tail2(0, 2, "tail_square");
-    partOfSnake tail3(0, 3, "tail_square");
-    partOfSnake tail4(0, 4, "tail_square");
+
+    fruit mainFruit = fruit();
 
     while (window.isOpen())
     {
@@ -42,6 +41,9 @@ int main()
         ChangeDir();
         window.clear();
         DrawMap(window);
+
+        mainFruit.Draw(window);
+
         UpdateSnake(nowTime);
         DrawSnake(window);
         window.display();

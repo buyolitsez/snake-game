@@ -6,13 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/buyolitsez/CLionProjects/snake-game/main.cpp
-SFML/Graphics.hpp
--
-map.h
-/home/buyolitsez/CLionProjects/snake-game/map.h
+/home/buyolitsez/CLionProjects/snake-game/fruit.cpp
+fruit.h
+/home/buyolitsez/CLionProjects/snake-game/fruit.h
+
+/home/buyolitsez/CLionProjects/snake-game/fruit.h
 partOfSnake.h
 /home/buyolitsez/CLionProjects/snake-game/partOfSnake.h
+random
+-
+chrono
+-
 
 /home/buyolitsez/CLionProjects/snake-game/map.h
 SFML/Graphics.hpp

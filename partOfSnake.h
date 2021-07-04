@@ -22,7 +22,7 @@ public:
     sf::Sprite sprite;
     Direction dir;
     float time = 0;
-    partOfSnake(int X, int Y, sf::String FileName);
+    partOfSnake(int X = 0, int Y = 0, sf::String FileName = "");
     void Update(float time);
     void Draw(sf::RenderWindow& window);
     void CorrectRotation();
@@ -30,7 +30,7 @@ public:
 
 void DrawSnake(sf::RenderWindow& window);
 
-extern std::vector<partOfSnake*> snakeParts;
+extern std::vector<partOfSnake> snakeParts;
 
 void UpdateSnake(float time);
 
