@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/buyolitsez/CLionProjects/snake-game/fruit.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/fruit.cpp.o"
+  "/home/buyolitsez/CLionProjects/snake-game/Fruit.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/Fruit.cpp.o"
+  "/home/buyolitsez/CLionProjects/snake-game/Map.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/Map.cpp.o"
+  "/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/PartOfSnake.cpp.o"
   "/home/buyolitsez/CLionProjects/snake-game/main.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/main.cpp.o"
-  "/home/buyolitsez/CLionProjects/snake-game/map.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/map.cpp.o"
-  "/home/buyolitsez/CLionProjects/snake-game/partOfSnake.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/partOfSnake.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

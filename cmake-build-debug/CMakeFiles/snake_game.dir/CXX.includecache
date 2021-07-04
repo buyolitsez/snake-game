@@ -6,27 +6,51 @@
 
 #IncludeRegexTransform: 
 
-/home/buyolitsez/CLionProjects/snake-game/fruit.cpp
-fruit.h
-/home/buyolitsez/CLionProjects/snake-game/fruit.h
+/home/buyolitsez/CLionProjects/snake-game/Constants.h
 
-/home/buyolitsez/CLionProjects/snake-game/fruit.h
-partOfSnake.h
-/home/buyolitsez/CLionProjects/snake-game/partOfSnake.h
+/home/buyolitsez/CLionProjects/snake-game/Fruit.cpp
+Fruit.h
+/home/buyolitsez/CLionProjects/snake-game/Fruit.h
+
+/home/buyolitsez/CLionProjects/snake-game/Fruit.h
+PartOfSnake.h
+/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
 random
 -
 chrono
 -
 
-/home/buyolitsez/CLionProjects/snake-game/map.h
-SFML/Graphics.hpp
--
+/home/buyolitsez/CLionProjects/snake-game/Map.cpp
+Map.h
+/home/buyolitsez/CLionProjects/snake-game/Map.h
 
-/home/buyolitsez/CLionProjects/snake-game/partOfSnake.h
+/home/buyolitsez/CLionProjects/snake-game/Map.h
 SFML/Graphics.hpp
 -
-map.h
-/home/buyolitsez/CLionProjects/snake-game/map.h
+Constants.h
+/home/buyolitsez/CLionProjects/snake-game/Constants.h
+
+/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.cpp
+PartOfSnake.h
+/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
+
+/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
+SFML/Graphics.hpp
+-
+Map.h
+/home/buyolitsez/CLionProjects/snake-game/Map.h
 vector
 -
+Constants.h
+/home/buyolitsez/CLionProjects/snake-game/Constants.h
+
+/home/buyolitsez/CLionProjects/snake-game/main.cpp
+SFML/Graphics.hpp
+-
+Map.h
+/home/buyolitsez/CLionProjects/snake-game/Map.h
+PartOfSnake.h
+/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
+Fruit.h
+/home/buyolitsez/CLionProjects/snake-game/Fruit.h
 

@@ -1,10 +1,10 @@
 
-#include "partOfSnake.h"
+#include "PartOfSnake.h"
 
-std::vector<partOfSnake> snakeParts;
+std::vector<PartOfSnake> snakeParts;
 
 
-partOfSnake::partOfSnake(int X, int Y, sf::String FileName) {
+PartOfSnake::PartOfSnake(int X, int Y, sf::String FileName) {
     file = FileName;
     image.loadFromFile("../images/" + file + "_up.png");
     texture.loadFromImage(image);
@@ -12,29 +12,29 @@ partOfSnake::partOfSnake(int X, int Y, sf::String FileName) {
     x = X; y = Y;
     time = 0;
     dir = Up;
-    sprite.setPosition(x * SIZEONESQUARE, y * SIZEONESQUARE);
+    sprite.setPosition(x * SIZE_ONE_SQUARE_OF_MAP, y * SIZE_ONE_SQUARE_OF_MAP);
     snakeParts.emplace_back(*this);
 }
 
-void partOfSnake::Update(float t) {
+void PartOfSnake::update(float t) {
     time += t;
-    if (time >= TimeToUpdate) {
+    if (time >= TIME_TO_UPDATE_FRAME) {
         if (dx == 0 && dy == 0) {return;}
         for (int i = int(snakeParts.size()) - 1; i > 0; --i) {
             snakeParts[i].x = snakeParts[i - 1].x;
             snakeParts[i].y = snakeParts[i - 1].y;
             snakeParts[i].dir = snakeParts[i - 1].dir;
-            snakeParts[i].CorrectRotation();
-            snakeParts[i].sprite.setPosition(snakeParts[i].x * SIZEONESQUARE, snakeParts[i].y * SIZEONESQUARE);
+            snakeParts[i].correctRotation();
+            snakeParts[i].sprite.setPosition(snakeParts[i].x * SIZE_ONE_SQUARE_OF_MAP, snakeParts[i].y * SIZE_ONE_SQUARE_OF_MAP);
         }
-        x = (x + dx + WIDTH) % WIDTH;
-        y = (y + dy + HEIGHT) % HEIGHT;
-        sprite.setPosition(x * SIZEONESQUARE, y * SIZEONESQUARE);
+        x = (x + dx + WIDTH_OF_MAP) % WIDTH_OF_MAP;
+        y = (y + dy + HEIGHT_OF_MAP) % HEIGHT_OF_MAP;
+        sprite.setPosition(x * SIZE_ONE_SQUARE_OF_MAP, y * SIZE_ONE_SQUARE_OF_MAP);
         time = 0;
     }
 }
 
-void partOfSnake::CorrectRotation() {
+void PartOfSnake::correctRotation() {
     sf::String add;
     switch(this->dir) {
         case Direction::Left: add = "_left"; break;
@@ -47,23 +47,23 @@ void partOfSnake::CorrectRotation() {
     sprite.setTexture(texture);
 }
 
-void partOfSnake::Draw(sf::RenderWindow& window) {
+void PartOfSnake::draw(sf::RenderWindow& window) {
     window.draw(this->sprite);
 }
 
 
-void DrawSnake(sf::RenderWindow& window) {
+void drawSnake(sf::RenderWindow& window) {
     for (auto &part : snakeParts) {
-        part.Draw(window);
+        part.draw(window);
     }
 }
 
-void UpdateSnake(float time) {
-    snakeParts[0].Update(time);
+void updateSnake(float time) {
+    snakeParts[0].update(time);
 }
 
 
-void ChangeDirHead(Direction dir) {
+void changeDirHead(Direction dir) {
     if (snakeParts[0].dir == dir) {
         return;
     }
@@ -81,5 +81,5 @@ void ChangeDirHead(Direction dir) {
         snakeParts[0].dx = 0;
         snakeParts[0].dy = 1;
     }
-    snakeParts[0].CorrectRotation();
+    snakeParts[0].correctRotation();
 }

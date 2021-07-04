@@ -5,17 +5,17 @@
 
 #pragma once
 
-#include "partOfSnake.h"
+#include "PartOfSnake.h"
 #include <random>
 #include <chrono>
 
-class fruit {
+class Fruit {
 public:
     std::mt19937 rnd;
     int x, y;
-    fruit();
-    void FindPosition();
-    void Draw(sf::RenderWindow& window);
+    Fruit();
+    void findPosition();
+    void draw(sf::RenderWindow& window);
 };
 
 

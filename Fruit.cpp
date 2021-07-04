@@ -2,35 +2,35 @@
 // Created by buyolitsez on 7/4/21.
 //
 
-#include "fruit.h"
+#include "Fruit.h"
 
-extern std::vector<partOfSnake> snakeParts;
+extern std::vector<PartOfSnake> snakeParts;
 
-fruit::fruit() {
+Fruit::Fruit() {
     auto seed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
     rnd = std::mt19937(seed);
-    this->FindPosition();
+    this->findPosition();
 }
 
-void fruit::Draw(sf::RenderWindow& window) {
+void Fruit::draw(sf::RenderWindow& window) {
     if (x == snakeParts[0].x && y == snakeParts[0].y) {
-        partOfSnake newPart = partOfSnake(snakeParts[0].x, snakeParts[0].y, "tail_square");
-        this->FindPosition();
+        PartOfSnake newPart = PartOfSnake(snakeParts[0].x, snakeParts[0].y, "tail_square");
+        this->findPosition();
     }
     sf::Texture texture;
     texture.loadFromFile("../images/fruit_square.png");
     sf::Sprite sprite;
     sprite.setTexture(texture);
-    sprite.setPosition(x * SIZEONESQUARE, y * SIZEONESQUARE);
+    sprite.setPosition(x * SIZE_ONE_SQUARE_OF_MAP, y * SIZE_ONE_SQUARE_OF_MAP);
     window.draw(sprite);
 }
 
-void fruit::FindPosition() {
+void Fruit::findPosition() {
     bool placeIsBusy;
     do{
         placeIsBusy = false;
-        x = rnd() % WIDTH;
-        y = rnd() % HEIGHT;
+        x = rnd() % WIDTH_OF_MAP;
+        y = rnd() % HEIGHT_OF_MAP;
         for (auto& part : snakeParts) {
             if (part.x == x && part.y == y) {
                 placeIsBusy = true;

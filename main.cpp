@@ -1,20 +1,20 @@
 #include <SFML/Graphics.hpp>
-#include "map.h"
-#include "partOfSnake.h"
-#include "fruit.h"
+#include "Map.h"
+#include "PartOfSnake.h"
+#include "Fruit.h"
 
-void ChangeDir() {
+void changeDir() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        ChangeDirHead(Direction::Left);
+        changeDirHead(Direction::Left);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        ChangeDirHead(Direction::Right);
+        changeDirHead(Direction::Right);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        ChangeDirHead(Direction::Up);
+        changeDirHead(Direction::Up);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-        ChangeDirHead(Direction::Down);
+        changeDirHead(Direction::Down);
     }
 }
 
@@ -24,9 +24,9 @@ int main()
 
     sf::Clock clock;
 
-    partOfSnake head(0, 0, "head_square");
+    PartOfSnake head(0, 0, "head_square");
 
-    fruit mainFruit = fruit();
+    Fruit mainFruit = Fruit();
 
     while (window.isOpen())
     {
@@ -38,14 +38,14 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        ChangeDir();
+        changeDir();
         window.clear();
-        DrawMap(window);
+        drawMap(window);
 
-        mainFruit.Draw(window);
+        mainFruit.draw(window);
 
-        UpdateSnake(nowTime);
-        DrawSnake(window);
+        updateSnake(nowTime);
+        drawSnake(window);
         window.display();
     }
     return 0;
