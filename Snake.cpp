@@ -4,6 +4,8 @@
 
 #include "Snake.h"
 
+std::vector<Snake> vectorSnakes;
+
 Snake::Snake() {
     snakeParts.emplace_back(PartOfSnake("head_square"));
 }
@@ -64,4 +66,38 @@ void Snake::draw(sf::RenderWindow& window) {
     for (auto &part : snakeParts) {
         part.draw(window);
     }
+}
+
+void startSnakes(int n) {
+    for (int i = 0; i < n; ++i) {
+        vectorSnakes.emplace_back(Snake());
+    }
+}
+
+bool isAliveSnakes() {
+    for (auto &snake : vectorSnakes) {
+        if (snake.alive) {
+            return true;
+        }
+    }
+    return false;
+}
+
+
+void changeDirHead(int i, int dir) {
+    vectorSnakes[i].changeDirHead(dir);
+}
+
+void updateSnake(int i, float t) {
+    vectorSnakes[i].update(t);
+}
+
+void drawSnakes(sf::RenderWindow& window) {
+    for (auto &snake : vectorSnakes) {
+        snake.draw(window);
+    }
+}
+
+int getAmountOfFruits(int i) {
+    return vectorSnakes[i].countOfFruits;
 }

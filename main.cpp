@@ -4,7 +4,7 @@
 #include <string>
 #include "Snake.h"
 
-void changeDirSnake(Snake& snake);
+void changeDirSnake(int i);
 
 
 int main()
@@ -19,7 +19,7 @@ int main()
 
     sf::Clock clock;
 
-    Snake snake = Snake();
+    startSnakes(1);
 
     startFruits(COUNT_OF_FRUITS);
 
@@ -33,18 +33,18 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        if (snake.alive) {
+        if (isAliveSnakes()) {
             window.clear();
 
             drawMap(window);
 
             drawFruits(window);
 
-            changeDirSnake(snake);
-            snake.update(nowTime);
-            snake.draw(window);
+            changeDirSnake(0);
+            updateSnake(0, nowTime);
+            drawSnakes(window);
 
-            text.setString("Fruits: " + std::to_string(snake.countOfFruits));
+            text.setString("Fruits: " + std::to_string(getAmountOfFruits(0)));
             window.draw(text);
 
             window.display();
@@ -55,17 +55,17 @@ int main()
 }
 
 
-void changeDirSnake(Snake& snake) {
+void changeDirSnake(int i) {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        snake.changeDirHead(1);
+        changeDirHead(i, 1);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        snake.changeDirHead(2);
+        changeDirHead(i, 2);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        snake.changeDirHead(3);
+        changeDirHead(i, 3);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-        snake.changeDirHead(4);
+        changeDirHead(i, 4);
     }
 }

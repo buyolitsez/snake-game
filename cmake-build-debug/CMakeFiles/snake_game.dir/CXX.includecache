@@ -8,12 +8,6 @@
 
 /home/buyolitsez/CLionProjects/snake-game/Constants.h
 
-/home/buyolitsez/CLionProjects/snake-game/Fruit.cpp
-Fruit.h
-/home/buyolitsez/CLionProjects/snake-game/Fruit.h
-Constants.h
-/home/buyolitsez/CLionProjects/snake-game/Constants.h
-
 /home/buyolitsez/CLionProjects/snake-game/Fruit.h
 random
 -
@@ -23,10 +17,6 @@ vector
 -
 SFML/Graphics.hpp
 -
-
-/home/buyolitsez/CLionProjects/snake-game/Map.cpp
-Map.h
-/home/buyolitsez/CLionProjects/snake-game/Map.h
 
 /home/buyolitsez/CLionProjects/snake-game/Map.h
 SFML/Graphics.hpp

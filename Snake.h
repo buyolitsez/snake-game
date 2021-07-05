@@ -9,6 +9,9 @@
 
 
 class PartOfSnake;
+class Snake;
+
+extern std::vector <Snake> vectorSnakes;
 
 class Snake {
 public:
@@ -24,3 +27,15 @@ public:
     void draw(sf::RenderWindow& window);
     bool checkDir(int dx, int dy);
 };
+
+void startSnakes(int n);
+
+bool isAliveSnakes();
+
+void changeDirHead(int i, int dir);
+
+void updateSnake(int i, float t);
+
+void drawSnakes(sf::RenderWindow& window);
+
+int getAmountOfFruits(int i);
