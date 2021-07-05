@@ -5,6 +5,7 @@
 #include <vector>
 #include "Constants.h"
 
+extern bool snakeALive;
 
 enum Direction {
     None,

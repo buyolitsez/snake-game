@@ -3,7 +3,7 @@
 #include "PartOfSnake.h"
 #include "Fruit.h"
 
-void changeDir() {
+void changeDirSnake() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
         changeDirHead(Direction::Left);
     }
@@ -18,13 +18,21 @@ void changeDir() {
     }
 }
 
+bool snakeAlive;
+
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1024, 768), "snake game");
+    sf::RenderWindow window(sf::VideoMode(WIDOW_WIDTH, WIDOW_HEIGHT), "snake game");
+
+    sf::Font font;
+    font.loadFromFile("../fonts/BebasNeue-Regular.ttf");
+    sf::Text text("123abc", font, 40);
+
 
     sf::Clock clock;
 
     PartOfSnake head(0, 0, "head_square");
+    snakeAlive = 1;
 
     Fruit mainFruit = Fruit();
 
@@ -38,15 +46,22 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        changeDir();
-        window.clear();
-        drawMap(window);
+        if (snakeAlive) {
+            window.clear();
 
-        mainFruit.draw(window);
+            drawMap(window);
 
-        updateSnake(nowTime);
-        drawSnake(window);
-        window.display();
+            mainFruit.draw(window);
+
+            changeDirSnake();
+            updateSnake(nowTime);
+            drawSnake(window);
+
+            window.draw(text);
+
+            window.display();
+
+        }
     }
     return 0;
 }

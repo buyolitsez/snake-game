@@ -4,7 +4,13 @@
 
 #pragma once
 
+const int WIDOW_WIDTH = 1024;
+const int WIDOW_HEIGHT = 768;
+
 const int HEIGHT_OF_MAP = 12;
 const int WIDTH_OF_MAP = 16;
 const int SIZE_ONE_SQUARE_OF_MAP = 64;
+
+
 const float TIME_TO_UPDATE_FRAME = 60;
+

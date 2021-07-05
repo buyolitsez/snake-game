@@ -2,6 +2,7 @@
 #include "PartOfSnake.h"
 
 std::vector<PartOfSnake> snakeParts;
+extern bool snakeAlive;
 
 
 PartOfSnake::PartOfSnake(int X, int Y, sf::String FileName) {
@@ -21,6 +22,9 @@ void PartOfSnake::update(float t) {
     if (time >= TIME_TO_UPDATE_FRAME) {
         if (dx == 0 && dy == 0) {return;}
         for (int i = int(snakeParts.size()) - 1; i > 0; --i) {
+            if (x + dx == snakeParts[i].x && y + dy == snakeParts[i].y) {
+                snakeAlive = false;
+            }
             snakeParts[i].x = snakeParts[i - 1].x;
             snakeParts[i].y = snakeParts[i - 1].y;
             snakeParts[i].dir = snakeParts[i - 1].dir;
