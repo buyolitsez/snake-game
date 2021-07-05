@@ -21,7 +21,7 @@ int main()
 
     Snake snake = Snake();
 
-    Fruit mainFruit = Fruit();
+    startFruits(COUNT_OF_FRUITS);
 
     while (window.isOpen())
     {
@@ -38,7 +38,7 @@ int main()
 
             drawMap(window);
 
-            mainFruit.draw(window);
+            drawFruits(window);
 
             changeDirSnake(snake);
             snake.update(nowTime);

@@ -24,11 +24,19 @@ vector
 SFML/Graphics.hpp
 -
 
+/home/buyolitsez/CLionProjects/snake-game/Map.cpp
+Map.h
+/home/buyolitsez/CLionProjects/snake-game/Map.h
+
 /home/buyolitsez/CLionProjects/snake-game/Map.h
 SFML/Graphics.hpp
 -
 Constants.h
 /home/buyolitsez/CLionProjects/snake-game/Constants.h
+
+/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.cpp
+PartOfSnake.h
+/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
 
 /home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
 SFML/Graphics.hpp
@@ -39,6 +47,10 @@ vector
 -
 Constants.h
 /home/buyolitsez/CLionProjects/snake-game/Constants.h
+Snake.h
+/home/buyolitsez/CLionProjects/snake-game/Snake.h
+
+/home/buyolitsez/CLionProjects/snake-game/Snake.cpp
 Snake.h
 /home/buyolitsez/CLionProjects/snake-game/Snake.h
 

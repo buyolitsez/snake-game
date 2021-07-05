@@ -12,6 +12,8 @@
 
 class Fruit;
 
+extern std::vector <Fruit> vectorFruits;
+
 class Fruit {
 public:
     std::mt19937 rnd;
@@ -21,4 +23,7 @@ public:
     void draw(sf::RenderWindow& window);
 };
 
+void startFruits(int n);
+
+void drawFruits(sf::RenderWindow& window);
 

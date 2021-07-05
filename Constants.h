@@ -14,3 +14,6 @@ const int SIZE_ONE_SQUARE_OF_MAP = 64;
 
 const float TIME_TO_UPDATE_FRAME = 60;
 
+
+
+const int COUNT_OF_FRUITS = 2;
