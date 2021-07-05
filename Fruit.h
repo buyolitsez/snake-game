@@ -27,3 +27,4 @@ void startFruits(int n);
 
 void drawFruits(sf::RenderWindow& window);
 
+bool eatFruit(int x, int y);

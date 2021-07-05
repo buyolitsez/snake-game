@@ -4,8 +4,10 @@
 
 #include "Fruit.h"
 #include "Constants.h"
+#include "Snake.h"
 
 std::vector <Fruit> vectorFruits;
+extern std::vector <Snake> vectorSnakes;
 
 Fruit::Fruit() {
     auto seed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
@@ -39,12 +41,17 @@ void Fruit::findPosition() {
                 break;
             }
         }
-/*        for (auto& part : snakeParts) {
-            if (part.x == x && part.y == y) {
-                placeIsBusy = true;
+        for (auto& snake : vectorSnakes) {
+            for (auto &part : snake.snakeParts) {
+                if (part.x == x && part.y == y) {
+                    placeIsBusy = true;
+                    break;
+                }
+            }
+            if (placeIsBusy) {
                 break;
             }
-        }*/
+        }
     }while(placeIsBusy);
 }
 
@@ -58,4 +65,15 @@ void drawFruits(sf::RenderWindow& window) {
     for (auto &fruit : vectorFruits) {
         fruit.draw(window);
     }
+}
+
+bool eatFruit(int x, int y) {
+    for (int i = 0; i < vectorFruits.size(); ++i) {
+        if (vectorFruits[i].x == x && vectorFruits[i].y == y) {
+            vectorFruits.erase(vectorFruits.begin() + i);
+            vectorFruits.emplace_back(Fruit());
+            return true;
+        }
+    }
+    return false;
 }

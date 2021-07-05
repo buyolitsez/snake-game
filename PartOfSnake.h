@@ -9,7 +9,7 @@
 
 class PartOfSnake {
 public:
-    int x = 0, y = 0;
+    int x = -1, y = -1;
     int dir = 3;
     sf::String file;
     sf::Image image;
@@ -19,4 +19,5 @@ public:
     void draw(sf::RenderWindow& window);
     void correctRotation();
 };
+
 

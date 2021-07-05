@@ -40,13 +40,12 @@ void Snake::changeDirHead(int dir) {
     }
 }
 
-
 void Snake::update(float t) {
     time += t;
     if (time >= TIME_TO_UPDATE_FRAME) {
         if (dx == 0 && dy == 0) {return;}
         for (int i = int(snakeParts.size()) - 1; i > 0; --i) {
-            if (x + dx == snakeParts[i].x && y + dy == snakeParts[i].y) {
+            if (snakeParts[0].x + dx == snakeParts[i].x && snakeParts[0].y + dy == snakeParts[i].y) {
                 alive = false;
             }
             snakeParts[i].x = snakeParts[i - 1].x;
@@ -55,10 +54,13 @@ void Snake::update(float t) {
             snakeParts[i].correctRotation();
             snakeParts[i].sprite.setPosition(snakeParts[i].x * SIZE_ONE_SQUARE_OF_MAP, snakeParts[i].y * SIZE_ONE_SQUARE_OF_MAP);
         }
-        x = (x + dx + WIDTH_OF_MAP) % WIDTH_OF_MAP;
-        y = (y + dy + HEIGHT_OF_MAP) % HEIGHT_OF_MAP;
-        snakeParts[0].sprite.setPosition(x * SIZE_ONE_SQUARE_OF_MAP, y * SIZE_ONE_SQUARE_OF_MAP);
+        snakeParts[0].x = (snakeParts[0].x + dx + WIDTH_OF_MAP) % WIDTH_OF_MAP;
+        snakeParts[0].y = (snakeParts[0].y + dy + HEIGHT_OF_MAP) % HEIGHT_OF_MAP;
+        snakeParts[0].sprite.setPosition(snakeParts[0].x * SIZE_ONE_SQUARE_OF_MAP, snakeParts[0].y * SIZE_ONE_SQUARE_OF_MAP);
         time = 0;
+        if (eatFruit(snakeParts[0].x, snakeParts[0].y)) {
+            add();
+        }
     }
 }
 
@@ -66,6 +68,11 @@ void Snake::draw(sf::RenderWindow& window) {
     for (auto &part : snakeParts) {
         part.draw(window);
     }
+}
+
+void Snake::add() {
+    countOfFruits++;
+    snakeParts.emplace_back("tail_square");
 }
 
 void startSnakes(int n) {
@@ -82,7 +89,6 @@ bool isAliveSnakes() {
     }
     return false;
 }
-
 
 void changeDirHead(int i, int dir) {
     vectorSnakes[i].changeDirHead(dir);
