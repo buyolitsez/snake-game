@@ -5,8 +5,6 @@ CMakeFiles/snake_game.dir/Fruit.cpp.o
  /home/buyolitsez/CLionProjects/snake-game/Constants.h
  /home/buyolitsez/CLionProjects/snake-game/Fruit.cpp
  /home/buyolitsez/CLionProjects/snake-game/Fruit.h
- /home/buyolitsez/CLionProjects/snake-game/Map.h
- /home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
 CMakeFiles/snake_game.dir/Map.cpp.o
  /home/buyolitsez/CLionProjects/snake-game/Constants.h
  /home/buyolitsez/CLionProjects/snake-game/Map.cpp
@@ -16,9 +14,17 @@ CMakeFiles/snake_game.dir/PartOfSnake.cpp.o
  /home/buyolitsez/CLionProjects/snake-game/Map.h
  /home/buyolitsez/CLionProjects/snake-game/PartOfSnake.cpp
  /home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
+ /home/buyolitsez/CLionProjects/snake-game/Snake.h
+CMakeFiles/snake_game.dir/Snake.cpp.o
+ /home/buyolitsez/CLionProjects/snake-game/Constants.h
+ /home/buyolitsez/CLionProjects/snake-game/Map.h
+ /home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
+ /home/buyolitsez/CLionProjects/snake-game/Snake.cpp
+ /home/buyolitsez/CLionProjects/snake-game/Snake.h
 CMakeFiles/snake_game.dir/main.cpp.o
  /home/buyolitsez/CLionProjects/snake-game/Constants.h
  /home/buyolitsez/CLionProjects/snake-game/Fruit.h
  /home/buyolitsez/CLionProjects/snake-game/Map.h
  /home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
+ /home/buyolitsez/CLionProjects/snake-game/Snake.h
  /home/buyolitsez/CLionProjects/snake-game/main.cpp

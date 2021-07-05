@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/snake_game.dir/Fruit.cpp.o"
   "CMakeFiles/snake_game.dir/Map.cpp.o"
   "CMakeFiles/snake_game.dir/PartOfSnake.cpp.o"
+  "CMakeFiles/snake_game.dir/Snake.cpp.o"
   "CMakeFiles/snake_game.dir/main.cpp.o"
   "snake_game"
   "snake_game.pdb"

@@ -103,6 +103,12 @@
 		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h">
 			<Option target="snake_game"/>
 		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/Snake.cpp">
+			<Option target="snake_game"/>
+		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/Snake.h">
+			<Option target="snake_game"/>
+		</Unit>
 		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/main.cpp">
 			<Option target="snake_game"/>
 		</Unit>

@@ -223,6 +223,33 @@ PartOfSnake.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/PartOfSnake.cpp.s
 .PHONY : PartOfSnake.cpp.s
 
+Snake.o: Snake.cpp.o
+
+.PHONY : Snake.o
+
+# target to build an object file
+Snake.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/Snake.cpp.o
+.PHONY : Snake.cpp.o
+
+Snake.i: Snake.cpp.i
+
+.PHONY : Snake.i
+
+# target to preprocess a source file
+Snake.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/Snake.cpp.i
+.PHONY : Snake.cpp.i
+
+Snake.s: Snake.cpp.s
+
+.PHONY : Snake.s
+
+# target to generate assembly for a file
+Snake.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/Snake.cpp.s
+.PHONY : Snake.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -268,6 +295,9 @@ help:
 	@echo "... PartOfSnake.o"
 	@echo "... PartOfSnake.i"
 	@echo "... PartOfSnake.s"
+	@echo "... Snake.o"
+	@echo "... Snake.i"
+	@echo "... Snake.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -4,44 +4,24 @@
 #include "Map.h"
 #include <vector>
 #include "Constants.h"
-
-class PartOfSnake;
-
-extern std::vector<PartOfSnake> snakeParts;
-extern bool snakeALive;
-extern int countOfFruits;
-
-enum Direction {
-    None,
-    Left,
-    Right,
-    Up,
-    Down
-};
+#include "Snake.h"
 
 
 class PartOfSnake {
 public:
-    int x, y, dx = 0, dy = 0;
+    int x, y;
+    int dir = 3;
     sf::String file;
     sf::Image image;
     sf::Texture texture;
     sf::Sprite sprite;
-    Direction dir;
-    float time = 0;
-    PartOfSnake(int X = 0, int Y = 0, sf::String FileName = "");
-    void update(float time);
+    PartOfSnake(sf::String FileName = "");
     void draw(sf::RenderWindow& window);
     void correctRotation();
 };
 
-void drawSnake(sf::RenderWindow& window);
 
 
 void updateSnake(float time);
 
-void changeDirHead(Direction dir);
 
-Direction reverse(Direction dir);
-
-bool checkDir(int dx, int dy);

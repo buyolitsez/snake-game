@@ -5,9 +5,12 @@
 
 #pragma once
 
-#include "PartOfSnake.h"
 #include <random>
 #include <chrono>
+#include <vector>
+#include <SFML/Graphics.hpp>
+
+class Fruit;
 
 class Fruit {
 public:

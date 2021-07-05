@@ -1,13 +1,11 @@
 #include <SFML/Graphics.hpp>
 #include "Map.h"
-#include "PartOfSnake.h"
 #include "Fruit.h"
 #include <string>
+#include "Snake.h"
 
-void changeDirSnake();
+void changeDirSnake(Snake& snake);
 
-bool snakeAlive;
-extern int countOfFruits;
 
 int main()
 {
@@ -21,8 +19,7 @@ int main()
 
     sf::Clock clock;
 
-    PartOfSnake head(0, 0, "head_square");
-    snakeAlive = 1;
+    Snake snake = Snake();
 
     Fruit mainFruit = Fruit();
 
@@ -36,18 +33,18 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        if (snakeAlive) {
+        if (snake.alive) {
             window.clear();
 
             drawMap(window);
 
             mainFruit.draw(window);
 
-            changeDirSnake();
-            updateSnake(nowTime);
-            drawSnake(window);
+            changeDirSnake(snake);
+            snake.update(nowTime);
+            snake.draw(window);
 
-            text.setString("Fruits: " + std::to_string(countOfFruits));
+            text.setString("Fruits: " + std::to_string(snake.countOfFruits));
             window.draw(text);
 
             window.display();
@@ -58,17 +55,17 @@ int main()
 }
 
 
-void changeDirSnake() {
+void changeDirSnake(Snake& snake) {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        changeDirHead(Direction::Left);
+        snake.changeDirHead(1);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        changeDirHead(Direction::Right);
+        snake.changeDirHead(2);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        changeDirHead(Direction::Up);
+        snake.changeDirHead(3);
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-        changeDirHead(Direction::Down);
+        snake.changeDirHead(4);
     }
 }
