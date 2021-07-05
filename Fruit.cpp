@@ -5,6 +5,8 @@
 #include "Fruit.h"
 
 extern std::vector<PartOfSnake> snakeParts;
+extern int countOfFruits = 0;
+
 
 Fruit::Fruit() {
     auto seed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
@@ -14,6 +16,7 @@ Fruit::Fruit() {
 
 void Fruit::draw(sf::RenderWindow& window) {
     if (x == snakeParts[0].x && y == snakeParts[0].y) {
+        ++countOfFruits;
         PartOfSnake newPart = PartOfSnake(snakeParts[0].x, snakeParts[0].y, "tail_square");
         this->findPosition();
     }

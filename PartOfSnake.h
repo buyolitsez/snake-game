@@ -5,7 +5,11 @@
 #include <vector>
 #include "Constants.h"
 
+class PartOfSnake;
+
+extern std::vector<PartOfSnake> snakeParts;
 extern bool snakeALive;
+extern int countOfFruits;
 
 enum Direction {
     None,
@@ -33,7 +37,6 @@ public:
 
 void drawSnake(sf::RenderWindow& window);
 
-extern std::vector<PartOfSnake> snakeParts;
 
 void updateSnake(float time);
 

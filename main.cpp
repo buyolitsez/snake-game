@@ -2,23 +2,12 @@
 #include "Map.h"
 #include "PartOfSnake.h"
 #include "Fruit.h"
+#include <string>
 
-void changeDirSnake() {
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        changeDirHead(Direction::Left);
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        changeDirHead(Direction::Right);
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        changeDirHead(Direction::Up);
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-        changeDirHead(Direction::Down);
-    }
-}
+void changeDirSnake();
 
 bool snakeAlive;
+extern int countOfFruits;
 
 int main()
 {
@@ -26,7 +15,8 @@ int main()
 
     sf::Font font;
     font.loadFromFile("../fonts/BebasNeue-Regular.ttf");
-    sf::Text text("123abc", font, 40);
+    sf::Text text("", font, 40);
+    text.setColor(sf::Color::Blue);
 
 
     sf::Clock clock;
@@ -57,6 +47,7 @@ int main()
             updateSnake(nowTime);
             drawSnake(window);
 
+            text.setString("Fruits: " + std::to_string(countOfFruits));
             window.draw(text);
 
             window.display();
@@ -64,4 +55,20 @@ int main()
         }
     }
     return 0;
+}
+
+
+void changeDirSnake() {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+        changeDirHead(Direction::Left);
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+        changeDirHead(Direction::Right);
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+        changeDirHead(Direction::Up);
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+        changeDirHead(Direction::Down);
+    }
 }

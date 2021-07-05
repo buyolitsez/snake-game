@@ -8,15 +8,19 @@
 
 /home/buyolitsez/CLionProjects/snake-game/Constants.h
 
+/home/buyolitsez/CLionProjects/snake-game/Fruit.h
+PartOfSnake.h
+/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
+random
+-
+chrono
+-
+
 /home/buyolitsez/CLionProjects/snake-game/Map.h
 SFML/Graphics.hpp
 -
 Constants.h
 /home/buyolitsez/CLionProjects/snake-game/Constants.h
-
-/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.cpp
-PartOfSnake.h
-/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
 
 /home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
 SFML/Graphics.hpp
@@ -27,4 +31,16 @@ vector
 -
 Constants.h
 /home/buyolitsez/CLionProjects/snake-game/Constants.h
+
+/home/buyolitsez/CLionProjects/snake-game/main.cpp
+SFML/Graphics.hpp
+-
+Map.h
+/home/buyolitsez/CLionProjects/snake-game/Map.h
+PartOfSnake.h
+/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
+Fruit.h
+/home/buyolitsez/CLionProjects/snake-game/Fruit.h
+string
+-
 
