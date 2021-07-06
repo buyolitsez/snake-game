@@ -6,7 +6,7 @@
 #pragma once
 
 #include "PartOfSnake.h"
-#include "Fruit.h"
+#include "../Fruit.h"
 
 
 class PartOfSnake;

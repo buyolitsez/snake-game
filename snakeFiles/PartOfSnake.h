@@ -1,9 +1,9 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include "Map.h"
+#include "../Map.h"
 #include <vector>
-#include "Constants.h"
+#include "../Constants.h"
 #include "Snake.h"
 
 

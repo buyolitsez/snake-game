@@ -9,14 +9,17 @@
 #include <chrono>
 #include <vector>
 #include <SFML/Graphics.hpp>
+#include "Constants.h"
+#include "snakeFiles/Snake.h"
+
 
 class Fruit;
 
 extern std::vector <Fruit> vectorFruits;
 
 class Fruit {
-public:
     std::mt19937 rnd;
+public:
     int x, y;
     Fruit();
     void findPosition();

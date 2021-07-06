@@ -196,60 +196,6 @@ Map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/Map.cpp.s
 .PHONY : Map.cpp.s
 
-PartOfSnake.o: PartOfSnake.cpp.o
-
-.PHONY : PartOfSnake.o
-
-# target to build an object file
-PartOfSnake.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/PartOfSnake.cpp.o
-.PHONY : PartOfSnake.cpp.o
-
-PartOfSnake.i: PartOfSnake.cpp.i
-
-.PHONY : PartOfSnake.i
-
-# target to preprocess a source file
-PartOfSnake.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/PartOfSnake.cpp.i
-.PHONY : PartOfSnake.cpp.i
-
-PartOfSnake.s: PartOfSnake.cpp.s
-
-.PHONY : PartOfSnake.s
-
-# target to generate assembly for a file
-PartOfSnake.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/PartOfSnake.cpp.s
-.PHONY : PartOfSnake.cpp.s
-
-Snake.o: Snake.cpp.o
-
-.PHONY : Snake.o
-
-# target to build an object file
-Snake.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/Snake.cpp.o
-.PHONY : Snake.cpp.o
-
-Snake.i: Snake.cpp.i
-
-.PHONY : Snake.i
-
-# target to preprocess a source file
-Snake.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/Snake.cpp.i
-.PHONY : Snake.cpp.i
-
-Snake.s: Snake.cpp.s
-
-.PHONY : Snake.s
-
-# target to generate assembly for a file
-Snake.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/Snake.cpp.s
-.PHONY : Snake.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -277,6 +223,60 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+snakeFiles/PartOfSnake.o: snakeFiles/PartOfSnake.cpp.o
+
+.PHONY : snakeFiles/PartOfSnake.o
+
+# target to build an object file
+snakeFiles/PartOfSnake.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.o
+.PHONY : snakeFiles/PartOfSnake.cpp.o
+
+snakeFiles/PartOfSnake.i: snakeFiles/PartOfSnake.cpp.i
+
+.PHONY : snakeFiles/PartOfSnake.i
+
+# target to preprocess a source file
+snakeFiles/PartOfSnake.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.i
+.PHONY : snakeFiles/PartOfSnake.cpp.i
+
+snakeFiles/PartOfSnake.s: snakeFiles/PartOfSnake.cpp.s
+
+.PHONY : snakeFiles/PartOfSnake.s
+
+# target to generate assembly for a file
+snakeFiles/PartOfSnake.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.s
+.PHONY : snakeFiles/PartOfSnake.cpp.s
+
+snakeFiles/Snake.o: snakeFiles/Snake.cpp.o
+
+.PHONY : snakeFiles/Snake.o
+
+# target to build an object file
+snakeFiles/Snake.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.o
+.PHONY : snakeFiles/Snake.cpp.o
+
+snakeFiles/Snake.i: snakeFiles/Snake.cpp.i
+
+.PHONY : snakeFiles/Snake.i
+
+# target to preprocess a source file
+snakeFiles/Snake.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.i
+.PHONY : snakeFiles/Snake.cpp.i
+
+snakeFiles/Snake.s: snakeFiles/Snake.cpp.s
+
+.PHONY : snakeFiles/Snake.s
+
+# target to generate assembly for a file
+snakeFiles/Snake.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.s
+.PHONY : snakeFiles/Snake.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -292,15 +292,15 @@ help:
 	@echo "... Map.o"
 	@echo "... Map.i"
 	@echo "... Map.s"
-	@echo "... PartOfSnake.o"
-	@echo "... PartOfSnake.i"
-	@echo "... PartOfSnake.s"
-	@echo "... Snake.o"
-	@echo "... Snake.i"
-	@echo "... Snake.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... snakeFiles/PartOfSnake.o"
+	@echo "... snakeFiles/PartOfSnake.i"
+	@echo "... snakeFiles/PartOfSnake.s"
+	@echo "... snakeFiles/Snake.o"
+	@echo "... snakeFiles/Snake.i"
+	@echo "... snakeFiles/Snake.s"
 .PHONY : help
 
 

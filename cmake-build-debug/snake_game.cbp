@@ -97,19 +97,22 @@
 		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/Map.h">
 			<Option target="snake_game"/>
 		</Unit>
-		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.cpp">
-			<Option target="snake_game"/>
-		</Unit>
-		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h">
-			<Option target="snake_game"/>
-		</Unit>
-		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/Snake.cpp">
-			<Option target="snake_game"/>
-		</Unit>
-		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/Snake.h">
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/brain/brain.h">
 			<Option target="snake_game"/>
 		</Unit>
 		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/main.cpp">
+			<Option target="snake_game"/>
+		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/snakeFiles/PartOfSnake.cpp">
+			<Option target="snake_game"/>
+		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/snakeFiles/PartOfSnake.h">
+			<Option target="snake_game"/>
+		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.cpp">
+			<Option target="snake_game"/>
+		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.h">
 			<Option target="snake_game"/>
 		</Unit>
 		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/CMakeLists.txt">

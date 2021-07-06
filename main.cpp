@@ -2,13 +2,15 @@
 #include "Map.h"
 #include "Fruit.h"
 #include <string>
-#include "Snake.h"
+#include "snakeFiles/Snake.h"
+#include "brain/brain.h"
 
 void changeDirSnake(int i);
 
 
 int main()
 {
+    loadTables();
     sf::RenderWindow window(sf::VideoMode(WIDOW_WIDTH, WIDOW_HEIGHT), "snake game");
 
     sf::Font font;
@@ -25,7 +27,7 @@ int main()
 
     while (window.isOpen())
     {
-        float nowTime = clock.getElapsedTime().asMilliseconds();
+        float nowTime = clock.getElapsedTime().asMicroseconds();
         clock.restart();
         sf::Event event;
         while (window.pollEvent(event))
@@ -51,6 +53,7 @@ int main()
 
         }
     }
+    setTables();
     return 0;
 }
 

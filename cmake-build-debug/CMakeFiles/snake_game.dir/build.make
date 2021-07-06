@@ -102,18 +102,18 @@ CMakeFiles/snake_game.dir/Map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake_game.dir/Map.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/buyolitsez/CLionProjects/snake-game/Map.cpp -o CMakeFiles/snake_game.dir/Map.cpp.s
 
-CMakeFiles/snake_game.dir/PartOfSnake.cpp.o: CMakeFiles/snake_game.dir/flags.make
-CMakeFiles/snake_game.dir/PartOfSnake.cpp.o: ../PartOfSnake.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/snake_game.dir/PartOfSnake.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/snake_game.dir/PartOfSnake.cpp.o -c /home/buyolitsez/CLionProjects/snake-game/PartOfSnake.cpp
+CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.o: CMakeFiles/snake_game.dir/flags.make
+CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.o: ../snakeFiles/PartOfSnake.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.o -c /home/buyolitsez/CLionProjects/snake-game/snakeFiles/PartOfSnake.cpp
 
-CMakeFiles/snake_game.dir/PartOfSnake.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/snake_game.dir/PartOfSnake.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/buyolitsez/CLionProjects/snake-game/PartOfSnake.cpp > CMakeFiles/snake_game.dir/PartOfSnake.cpp.i
+CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/buyolitsez/CLionProjects/snake-game/snakeFiles/PartOfSnake.cpp > CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.i
 
-CMakeFiles/snake_game.dir/PartOfSnake.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake_game.dir/PartOfSnake.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/buyolitsez/CLionProjects/snake-game/PartOfSnake.cpp -o CMakeFiles/snake_game.dir/PartOfSnake.cpp.s
+CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/buyolitsez/CLionProjects/snake-game/snakeFiles/PartOfSnake.cpp -o CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.s
 
 CMakeFiles/snake_game.dir/Fruit.cpp.o: CMakeFiles/snake_game.dir/flags.make
 CMakeFiles/snake_game.dir/Fruit.cpp.o: ../Fruit.cpp
@@ -128,35 +128,35 @@ CMakeFiles/snake_game.dir/Fruit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake_game.dir/Fruit.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/buyolitsez/CLionProjects/snake-game/Fruit.cpp -o CMakeFiles/snake_game.dir/Fruit.cpp.s
 
-CMakeFiles/snake_game.dir/Snake.cpp.o: CMakeFiles/snake_game.dir/flags.make
-CMakeFiles/snake_game.dir/Snake.cpp.o: ../Snake.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/snake_game.dir/Snake.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/snake_game.dir/Snake.cpp.o -c /home/buyolitsez/CLionProjects/snake-game/Snake.cpp
+CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.o: CMakeFiles/snake_game.dir/flags.make
+CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.o: ../snakeFiles/Snake.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.o -c /home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.cpp
 
-CMakeFiles/snake_game.dir/Snake.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/snake_game.dir/Snake.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/buyolitsez/CLionProjects/snake-game/Snake.cpp > CMakeFiles/snake_game.dir/Snake.cpp.i
+CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.cpp > CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.i
 
-CMakeFiles/snake_game.dir/Snake.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake_game.dir/Snake.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/buyolitsez/CLionProjects/snake-game/Snake.cpp -o CMakeFiles/snake_game.dir/Snake.cpp.s
+CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.cpp -o CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.s
 
 # Object files for target snake_game
 snake_game_OBJECTS = \
 "CMakeFiles/snake_game.dir/main.cpp.o" \
 "CMakeFiles/snake_game.dir/Map.cpp.o" \
-"CMakeFiles/snake_game.dir/PartOfSnake.cpp.o" \
+"CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.o" \
 "CMakeFiles/snake_game.dir/Fruit.cpp.o" \
-"CMakeFiles/snake_game.dir/Snake.cpp.o"
+"CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.o"
 
 # External object files for target snake_game
 snake_game_EXTERNAL_OBJECTS =
 
 snake_game: CMakeFiles/snake_game.dir/main.cpp.o
 snake_game: CMakeFiles/snake_game.dir/Map.cpp.o
-snake_game: CMakeFiles/snake_game.dir/PartOfSnake.cpp.o
+snake_game: CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.o
 snake_game: CMakeFiles/snake_game.dir/Fruit.cpp.o
-snake_game: CMakeFiles/snake_game.dir/Snake.cpp.o
+snake_game: CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.o
 snake_game: CMakeFiles/snake_game.dir/build.make
 snake_game: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1
 snake_game: /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1

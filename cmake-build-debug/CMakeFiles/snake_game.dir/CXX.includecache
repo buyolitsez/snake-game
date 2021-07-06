@@ -8,14 +8,6 @@
 
 /home/buyolitsez/CLionProjects/snake-game/Constants.h
 
-/home/buyolitsez/CLionProjects/snake-game/Fruit.cpp
-Fruit.h
-/home/buyolitsez/CLionProjects/snake-game/Fruit.h
-Constants.h
-/home/buyolitsez/CLionProjects/snake-game/Constants.h
-Snake.h
-/home/buyolitsez/CLionProjects/snake-game/Snake.h
-
 /home/buyolitsez/CLionProjects/snake-game/Fruit.h
 random
 -
@@ -25,6 +17,10 @@ vector
 -
 SFML/Graphics.hpp
 -
+Constants.h
+/home/buyolitsez/CLionProjects/snake-game/Constants.h
+snakeFiles/Snake.h
+/home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.h
 
 /home/buyolitsez/CLionProjects/snake-game/Map.h
 SFML/Graphics.hpp
@@ -32,31 +28,13 @@ SFML/Graphics.hpp
 Constants.h
 /home/buyolitsez/CLionProjects/snake-game/Constants.h
 
-/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.cpp
-PartOfSnake.h
-/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
-
-/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
-SFML/Graphics.hpp
+/home/buyolitsez/CLionProjects/snake-game/brain/brain.h
+iostream
 -
-Map.h
-/home/buyolitsez/CLionProjects/snake-game/Map.h
-vector
+fstream
 -
-Constants.h
+../Constants.h
 /home/buyolitsez/CLionProjects/snake-game/Constants.h
-Snake.h
-/home/buyolitsez/CLionProjects/snake-game/Snake.h
-
-/home/buyolitsez/CLionProjects/snake-game/Snake.cpp
-Snake.h
-/home/buyolitsez/CLionProjects/snake-game/Snake.h
-
-/home/buyolitsez/CLionProjects/snake-game/Snake.h
-PartOfSnake.h
-/home/buyolitsez/CLionProjects/snake-game/PartOfSnake.h
-Fruit.h
-/home/buyolitsez/CLionProjects/snake-game/Fruit.h
 
 /home/buyolitsez/CLionProjects/snake-game/main.cpp
 SFML/Graphics.hpp
@@ -67,6 +45,26 @@ Fruit.h
 /home/buyolitsez/CLionProjects/snake-game/Fruit.h
 string
 -
+snakeFiles/Snake.h
+/home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.h
+brain/brain.h
+/home/buyolitsez/CLionProjects/snake-game/brain/brain.h
+
+/home/buyolitsez/CLionProjects/snake-game/snakeFiles/PartOfSnake.h
+SFML/Graphics.hpp
+-
+../Map.h
+/home/buyolitsez/CLionProjects/snake-game/Map.h
+vector
+-
+../Constants.h
+/home/buyolitsez/CLionProjects/snake-game/Constants.h
 Snake.h
-/home/buyolitsez/CLionProjects/snake-game/Snake.h
+/home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.h
+
+/home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.h
+PartOfSnake.h
+/home/buyolitsez/CLionProjects/snake-game/snakeFiles/PartOfSnake.h
+../Fruit.h
+/home/buyolitsez/CLionProjects/snake-game/Fruit.h
 

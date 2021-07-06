@@ -3,8 +3,6 @@
 //
 
 #include "Fruit.h"
-#include "Constants.h"
-#include "Snake.h"
 
 std::vector <Fruit> vectorFruits;
 extern std::vector <Snake> vectorSnakes;
@@ -16,11 +14,6 @@ Fruit::Fruit() {
 }
 
 void Fruit::draw(sf::RenderWindow& window) {
-/*    if (x == snakeParts[0].x && y == snakeParts[0].y) {
-        ++countOfFruits;
-        PartOfSnake newPart = PartOfSnake(snakeParts[0].x, snakeParts[0].y, "tail_square");
-        this->findPosition();
-    }*/
     sf::Texture texture;
     texture.loadFromFile("../images/fruit_square.png");
     sf::Sprite sprite;
@@ -31,6 +24,7 @@ void Fruit::draw(sf::RenderWindow& window) {
 
 void Fruit::findPosition() {
     bool placeIsBusy;
+    int countToTry = 100;
     do{
         placeIsBusy = false;
         x = rnd() % WIDTH_OF_MAP;
@@ -52,7 +46,7 @@ void Fruit::findPosition() {
                 break;
             }
         }
-    }while(placeIsBusy);
+    }while(placeIsBusy && countToTry--);
 }
 
 void startFruits(int n) {
