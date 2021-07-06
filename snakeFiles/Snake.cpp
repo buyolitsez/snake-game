@@ -75,6 +75,14 @@ void Snake::add() {
     snakeParts.emplace_back("tail_square");
 }
 
+int Snake::getX() {
+    return snakeParts[0].x;
+}
+
+int Snake::getY() {
+    return snakeParts[0].y;
+}
+
 void startSnakes(int n) {
     for (int i = 0; i < n; ++i) {
         vectorSnakes.emplace_back(Snake());
@@ -90,7 +98,8 @@ bool isAliveSnakes() {
     return false;
 }
 
-void changeDirHead(int i, int dir) {
+void changeDirHead(int i) {
+    int dir = getDirection(vectorSnakes[i]);
     vectorSnakes[i].changeDirHead(dir);
 }
 

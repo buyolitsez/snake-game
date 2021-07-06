@@ -196,6 +196,33 @@ Map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/Map.cpp.s
 .PHONY : Map.cpp.s
 
+brain/brain.o: brain/brain.cpp.o
+
+.PHONY : brain/brain.o
+
+# target to build an object file
+brain/brain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/brain/brain.cpp.o
+.PHONY : brain/brain.cpp.o
+
+brain/brain.i: brain/brain.cpp.i
+
+.PHONY : brain/brain.i
+
+# target to preprocess a source file
+brain/brain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/brain/brain.cpp.i
+.PHONY : brain/brain.cpp.i
+
+brain/brain.s: brain/brain.cpp.s
+
+.PHONY : brain/brain.s
+
+# target to generate assembly for a file
+brain/brain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/brain/brain.cpp.s
+.PHONY : brain/brain.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -292,6 +319,9 @@ help:
 	@echo "... Map.o"
 	@echo "... Map.i"
 	@echo "... Map.s"
+	@echo "... brain/brain.o"
+	@echo "... brain/brain.i"
+	@echo "... brain/brain.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

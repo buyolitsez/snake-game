@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/buyolitsez/CLionProjects/snake-game/Fruit.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/Fruit.cpp.o"
   "/home/buyolitsez/CLionProjects/snake-game/Map.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/Map.cpp.o"
+  "/home/buyolitsez/CLionProjects/snake-game/brain/brain.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/brain/brain.cpp.o"
   "/home/buyolitsez/CLionProjects/snake-game/main.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/main.cpp.o"
   "/home/buyolitsez/CLionProjects/snake-game/snakeFiles/PartOfSnake.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.o"
   "/home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.cpp" "/home/buyolitsez/CLionProjects/snake-game/cmake-build-debug/CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.o"

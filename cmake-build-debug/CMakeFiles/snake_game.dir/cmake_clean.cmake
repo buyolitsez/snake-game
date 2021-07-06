@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/snake_game.dir/Fruit.cpp.o"
   "CMakeFiles/snake_game.dir/Map.cpp.o"
+  "CMakeFiles/snake_game.dir/brain/brain.cpp.o"
   "CMakeFiles/snake_game.dir/main.cpp.o"
   "CMakeFiles/snake_game.dir/snakeFiles/PartOfSnake.cpp.o"
   "CMakeFiles/snake_game.dir/snakeFiles/Snake.cpp.o"

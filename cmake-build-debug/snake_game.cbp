@@ -97,6 +97,9 @@
 		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/Map.h">
 			<Option target="snake_game"/>
 		</Unit>
+		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/brain/brain.cpp">
+			<Option target="snake_game"/>
+		</Unit>
 		<Unit filename="/home/buyolitsez/CLionProjects/snake-game/brain/brain.h">
 			<Option target="snake_game"/>
 		</Unit>

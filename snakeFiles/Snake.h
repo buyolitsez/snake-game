@@ -7,6 +7,7 @@
 
 #include "PartOfSnake.h"
 #include "../Fruit.h"
+#include "../brain/brain.h"
 
 
 class PartOfSnake;
@@ -27,13 +28,15 @@ public:
     void draw(sf::RenderWindow& window);
     bool checkDir(int dx, int dy);
     void add();
+    int getX();
+    int getY();
 };
 
 void startSnakes(int n);
 
 bool isAliveSnakes();
 
-void changeDirHead(int i, int dir);
+void changeDirHead(int i);
 
 void updateSnake(int i, float t);
 

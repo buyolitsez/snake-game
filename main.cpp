@@ -59,16 +59,5 @@ int main()
 
 
 void changeDirSnake(int i) {
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        changeDirHead(i, 1);
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        changeDirHead(i, 2);
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        changeDirHead(i, 3);
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-        changeDirHead(i, 4);
-    }
+    changeDirHead(i);
 }
