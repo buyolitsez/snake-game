@@ -15,3 +15,7 @@ void drawMap(sf::RenderWindow& window) {
     }
 }
 
+bool inBounds(int x, int y) {
+    return x >= 0 && y >= 0 && x < WIDTH_OF_MAP && y < HEIGHT_OF_MAP;
+}
+

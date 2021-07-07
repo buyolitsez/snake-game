@@ -39,6 +39,22 @@ fstream
 /home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.h
 ../Map.h
 /home/buyolitsez/CLionProjects/snake-game/Map.h
+cassert
+-
+
+/home/buyolitsez/CLionProjects/snake-game/main.cpp
+SFML/Graphics.hpp
+-
+Map.h
+/home/buyolitsez/CLionProjects/snake-game/Map.h
+Fruit.h
+/home/buyolitsez/CLionProjects/snake-game/Fruit.h
+string
+-
+snakeFiles/Snake.h
+/home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.h
+brain/brain.h
+/home/buyolitsez/CLionProjects/snake-game/brain/brain.h
 
 /home/buyolitsez/CLionProjects/snake-game/snakeFiles/PartOfSnake.h
 SFML/Graphics.hpp
@@ -49,10 +65,6 @@ vector
 -
 ../Constants.h
 /home/buyolitsez/CLionProjects/snake-game/Constants.h
-Snake.h
-/home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.h
-
-/home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.cpp
 Snake.h
 /home/buyolitsez/CLionProjects/snake-game/snakeFiles/Snake.h
 

@@ -9,7 +9,7 @@ extern std::vector <Snake> vectorSnakes;
 
 Fruit::Fruit() {
     auto seed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
-    rnd = std::mt19937(seed);
+    rnd = std::mt19937(0);
     this->findPosition();
 }
 
@@ -29,24 +29,11 @@ void Fruit::findPosition() {
         placeIsBusy = false;
         x = rnd() % WIDTH_OF_MAP;
         y = rnd() % HEIGHT_OF_MAP;
-        for (auto &fruit : vectorFruits) {
-            if (fruit.x == x && fruit.y == y) {
-                placeIsBusy = true;
-                break;
-            }
-        }
-        for (auto& snake : vectorSnakes) {
-            for (auto &part : snake.snakeParts) {
-                if (part.x == x && part.y == y) {
-                    placeIsBusy = true;
-                    break;
-                }
-            }
-            if (placeIsBusy) {
-                break;
-            }
+        if (isFruit[x][y] || isBlock[x][y]) {
+            placeIsBusy = true;
         }
     }while(placeIsBusy && countToTry--);
+    isFruit[x][y]++;
 }
 
 void startFruits(int n) {
@@ -64,6 +51,7 @@ void drawFruits(sf::RenderWindow& window) {
 bool eatFruit(int x, int y) {
     for (int i = 0; i < vectorFruits.size(); ++i) {
         if (vectorFruits[i].x == x && vectorFruits[i].y == y) {
+            isFruit[x][y]--;
             vectorFruits.erase(vectorFruits.begin() + i);
             vectorFruits.emplace_back(Fruit());
             return true;

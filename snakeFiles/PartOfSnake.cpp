@@ -3,6 +3,12 @@
 
 
 PartOfSnake::PartOfSnake(sf::String FileName) {
+    if (FileName != "head_square") {
+        x = -1;
+        y = -1;
+    } else {
+        isBlock[x][y]++;
+    }
     file = FileName;
     image.loadFromFile("../images/" + file + "_up.png");
     texture.loadFromImage(image);

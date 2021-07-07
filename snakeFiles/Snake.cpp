@@ -44,18 +44,25 @@ void Snake::update(float t) {
     time += t;
     if (time >= TIME_TO_UPDATE_FRAME) {
         if (dx == 0 && dy == 0) {return;}
+        int nextX = snakeParts[0].x + dx;
+        int nextY = snakeParts[0].y + dy;
+        if (isBlock[nextX][nextY] || !inBounds(nextX, nextY)) {
+            alive = false;
+            return;
+        }
         for (int i = int(snakeParts.size()) - 1; i > 0; --i) {
-            if (snakeParts[0].x + dx == snakeParts[i].x && snakeParts[0].y + dy == snakeParts[i].y) {
-                alive = false;
-            }
+            --isBlock[snakeParts[i].x][snakeParts[i].y];
             snakeParts[i].x = snakeParts[i - 1].x;
             snakeParts[i].y = snakeParts[i - 1].y;
+            ++isBlock[snakeParts[i].x][snakeParts[i].y];
             snakeParts[i].dir = snakeParts[i - 1].dir;
             snakeParts[i].correctRotation();
             snakeParts[i].sprite.setPosition(snakeParts[i].x * SIZE_ONE_SQUARE_OF_MAP, snakeParts[i].y * SIZE_ONE_SQUARE_OF_MAP);
         }
-        snakeParts[0].x = (snakeParts[0].x + dx + WIDTH_OF_MAP) % WIDTH_OF_MAP;
-        snakeParts[0].y = (snakeParts[0].y + dy + HEIGHT_OF_MAP) % HEIGHT_OF_MAP;
+        --isBlock[snakeParts[0].x][snakeParts[0].y];
+        snakeParts[0].x = nextX;
+        snakeParts[0].y = nextY;
+        ++isBlock[nextX][nextY];
         snakeParts[0].sprite.setPosition(snakeParts[0].x * SIZE_ONE_SQUARE_OF_MAP, snakeParts[0].y * SIZE_ONE_SQUARE_OF_MAP);
         time = 0;
         if (eatFruit(snakeParts[0].x, snakeParts[0].y)) {
@@ -73,6 +80,7 @@ void Snake::draw(sf::RenderWindow& window) {
 void Snake::add() {
     countOfFruits++;
     snakeParts.emplace_back("tail_square");
+    snakeParts[0].correctRotation();
 }
 
 int Snake::getX() {
@@ -98,9 +106,14 @@ bool isAliveSnakes() {
     return false;
 }
 
-void changeDirHead(int i) {
+void changeDirHead(int i, sf::RenderWindow& window) {
     int dir = getDirection(vectorSnakes[i]);
-    vectorSnakes[i].changeDirHead(dir);
+    int user = cinDirection();
+    if (dir != user) {
+        addTable(vectorSnakes[i], user, 1);
+        addTable(vectorSnakes[i], dir, -1);
+    }
+    vectorSnakes[i].changeDirHead(user);
 }
 
 void updateSnake(int i, float t) {
@@ -115,4 +128,28 @@ void drawSnakes(sf::RenderWindow& window) {
 
 int getAmountOfFruits(int i) {
     return vectorSnakes[i].countOfFruits;
+}
+
+int cinDirection() {
+    while(true) {
+        bool pressed = false;
+        while (!pressed) {
+            pressed = sf::Keyboard::isKeyPressed(sf::Keyboard::Left) |
+                      sf::Keyboard::isKeyPressed(sf::Keyboard::Right) |
+                      sf::Keyboard::isKeyPressed(sf::Keyboard::Up) |
+                      sf::Keyboard::isKeyPressed(sf::Keyboard::Down);
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+            return 1;
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+            return 2;
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+            return 3;
+        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+            return 4;
+        }
+    }
 }

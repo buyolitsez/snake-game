@@ -9,7 +9,7 @@
 
 class PartOfSnake {
 public:
-    int x = -1, y = -1;
+    int x = 0, y = 0;
     int dir = 3;
     sf::String file;
     sf::Image image;

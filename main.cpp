@@ -5,7 +5,7 @@
 #include "snakeFiles/Snake.h"
 #include "brain/brain.h"
 
-void changeDirSnake(int i);
+void changeDirSnake(int i, sf::RenderWindow& window);
 
 
 int main()
@@ -42,22 +42,40 @@ int main()
 
             drawFruits(window);
 
-            changeDirSnake(0);
+            {
+                int dir = getDirection(vectorSnakes[0]);
+                sf::Font font;
+                font.loadFromFile("../fonts/BebasNeue-Regular.ttf");
+                sf::Text text("", font, 40);
+                text.setColor(sf::Color::Blue);
+                text.setPosition(0, 100);
+                sf::String direction = "Down";
+                if (dir == 1) {
+                    direction = "Left";
+                } else if (dir == 2) {
+                    direction = "Right";
+                } else if (dir == 3) {
+                    direction = "Up";
+                }
+                text.setString(direction);
+                window.draw(text);
+            }
+
+            changeDirSnake(0, window);
             updateSnake(0, nowTime);
             drawSnakes(window);
 
             text.setString("Fruits: " + std::to_string(getAmountOfFruits(0)));
             window.draw(text);
-
             window.display();
-
+            setTables();
         }
     }
-    setTables();
+//    setTables();
     return 0;
 }
 
 
-void changeDirSnake(int i) {
-    changeDirHead(i);
+void changeDirSnake(int i, sf::RenderWindow& window) {
+    changeDirHead(i, window);
 }

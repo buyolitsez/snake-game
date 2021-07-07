@@ -36,10 +36,12 @@ void startSnakes(int n);
 
 bool isAliveSnakes();
 
-void changeDirHead(int i);
+void changeDirHead(int i, sf::RenderWindow& window);
 
 void updateSnake(int i, float t);
 
 void drawSnakes(sf::RenderWindow& window);
 
 int getAmountOfFruits(int i);
+
+int cinDirection();
