@@ -42,6 +42,14 @@ int main()
 
             drawFruits(window);
 
+
+            changeDirSnake(0, window);
+            updateSnake(0, nowTime);
+            drawSnakes(window);
+
+            text.setString("Fruits: " + std::to_string(getAmountOfFruits(0)));
+            window.draw(text);
+
             {
                 int dir = getDirection(vectorSnakes[0]);
                 sf::Font font;
@@ -59,19 +67,13 @@ int main()
                 }
                 text.setString(direction);
                 window.draw(text);
+                window.display();
             }
-
-            changeDirSnake(0, window);
-            updateSnake(0, nowTime);
-            drawSnakes(window);
-
-            text.setString("Fruits: " + std::to_string(getAmountOfFruits(0)));
-            window.draw(text);
             window.display();
-            setTables();
         }
     }
-//    setTables();
+//    setTablesDebug();
+    setTables();
     return 0;
 }
 

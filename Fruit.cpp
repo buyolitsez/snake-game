@@ -9,7 +9,7 @@ extern std::vector <Snake> vectorSnakes;
 
 Fruit::Fruit() {
     auto seed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
-    rnd = std::mt19937(0);
+    rnd = std::mt19937(seed);
     this->findPosition();
 }
 

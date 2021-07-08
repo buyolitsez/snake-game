@@ -23,6 +23,8 @@ public:
 //extern Ceil tableFruits[BRAIN_SEE][BRAIN_SEE];
 //extern Ceil tableBlock[BRAIN_SEE][BRAIN_SEE];
 
+void setTablesDebug();
+
 void loadTables();
 
 void setTables();

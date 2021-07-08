@@ -15,7 +15,7 @@ const int SIZE_ONE_SQUARE_OF_MAP = 64;
 const float TIME_TO_UPDATE_FRAME = 250 * 1000;
 
 
-const int COUNT_OF_FRUITS = 4;
+const int COUNT_OF_FRUITS = 5;
 
 
-const int BRAIN_SEE = 11;
+const int BRAIN_SEE = 19;

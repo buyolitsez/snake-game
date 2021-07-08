@@ -108,12 +108,15 @@ bool isAliveSnakes() {
 
 void changeDirHead(int i, sf::RenderWindow& window) {
     int dir = getDirection(vectorSnakes[i]);
+#ifdef LEARN
     int user = cinDirection();
     if (dir != user) {
-        addTable(vectorSnakes[i], user, 1);
-        addTable(vectorSnakes[i], dir, -1);
+        addTable(vectorSnakes[i], user, dir);
+//        setTablesDebug();
     }
-    vectorSnakes[i].changeDirHead(user);
+    dir = user;
+#endif
+    vectorSnakes[i].changeDirHead(dir);
 }
 
 void updateSnake(int i, float t) {

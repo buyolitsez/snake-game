@@ -40,6 +40,103 @@ void loadTables() {
     }
 }
 
+void setTablesDebug() {
+    std::ofstream ofs;
+    ofs.open("../brain/fakeTables.txt", std::ios::out | std::ios::app);
+    ofs << "FRUITS\n";
+    ofs << "LEFT\n";
+    for (int j = 0; j < BRAIN_SEE; ++j) {
+        for (int i = 0; i < BRAIN_SEE; ++i) {
+                if (i == BRAIN_SEE / 2 && j == BRAIN_SEE / 2) {
+                ofs << "X ";
+            } else {
+                ofs << tableFruits[i][j].left << ' ';
+            }
+        }
+        ofs << '\n';
+    }
+    ofs << "RIGHT\n";
+    for (int j = 0; j < BRAIN_SEE; ++j) {
+        for (int i = 0; i < BRAIN_SEE; ++i) {
+            if (i == BRAIN_SEE / 2 && j == BRAIN_SEE / 2) {
+                ofs << "X ";
+            } else {
+                ofs << tableFruits[i][j].right << ' ';
+            }
+        }
+        ofs << '\n';
+    }
+    ofs << "UP\n";
+    for (int j = 0; j < BRAIN_SEE; ++j) {
+        for (int i = 0; i < BRAIN_SEE; ++i) {
+            if (i == BRAIN_SEE / 2 && j == BRAIN_SEE / 2) {
+                ofs << "X ";
+            } else {
+                ofs << tableFruits[i][j].up << ' ';
+            }
+        }
+        ofs << '\n';
+    }
+    ofs << "DOWN\n";
+    for (int j = 0; j < BRAIN_SEE; ++j) {
+        for (int i = 0; i < BRAIN_SEE; ++i) {
+                if (i == BRAIN_SEE / 2 && j == BRAIN_SEE / 2) {
+                ofs << "X ";
+            } else {
+                ofs << tableFruits[i][j].down << ' ';
+            }
+        }
+        ofs << '\n';
+    }
+    ofs << "___________-\n";
+    ofs << "BLOCKS\n";
+    ofs << "LEFT\n";
+    for (int j = 0; j < BRAIN_SEE; ++j) {
+        for (int i = 0; i < BRAIN_SEE; ++i) {
+                if (i == BRAIN_SEE / 2 && j == BRAIN_SEE / 2) {
+                ofs << "X ";
+            } else {
+                ofs << tableBlock[i][j].left << ' ';
+            }
+        }
+        ofs << '\n';
+    }
+    ofs << "RIGHT\n";
+    for (int j = 0; j < BRAIN_SEE; ++j) {
+            for (int i = 0; i < BRAIN_SEE; ++i) {
+            if (i == BRAIN_SEE / 2 && j == BRAIN_SEE / 2) {
+                ofs << "X ";
+            } else {
+                ofs << tableBlock[i][j].right << ' ';
+            }
+        }
+        ofs << '\n';
+    }
+    ofs << "UP\n";
+    for (int j = 0; j < BRAIN_SEE; ++j) {
+        for (int i = 0; i < BRAIN_SEE; ++i) {
+            if (i == BRAIN_SEE / 2 && j == BRAIN_SEE / 2) {
+                ofs << "X ";
+            } else {
+                ofs << tableBlock[i][j].up << ' ';
+            }
+        }
+        ofs << '\n';
+    }
+    ofs << "DOWN\n";
+    for (int j = 0; j < BRAIN_SEE; ++j) {
+        for (int i = 0; i < BRAIN_SEE; ++i) {
+            if (i == BRAIN_SEE / 2 && j == BRAIN_SEE / 2) {
+                ofs << "X ";
+            } else {
+                ofs << tableBlock[i][j].down << ' ';
+            }
+        }
+        ofs << '\n';
+    }
+    ofs << "################################\n";
+}
+
 void setTables() {
     std::ofstream ofs;
     ofs.open("../brain/fakeTables.txt", std::ios::out | std::ios::trunc);
@@ -58,11 +155,11 @@ void setTables() {
 int getDirection(Snake& snake) {
     int half = BRAIN_SEE / 2;
     int left = 0, right = 0, up = 0, down = 0;
-    for (int dx = -half; dx <= half; ++dx) {
-        for (int dy = -half; dy <= half; ++dy) {
+    for (int dy = -half; dy <= half; ++dy) {
+        for (int dx = -half; dx <= half; ++dx) {
+            if (dx == 0 && dy == 0) {continue;}
             int x = snake.getX() + dx;
             int y = snake.getY() + dy;
-            if (!inBounds(x, y)) {continue;}
             if (!inBounds(x, y) || isBlock[x][y]) {
                 tableBlock[dx + half][dy + half].add(left, right, up, down);
             } else if (isFruit[x][y]) {
@@ -84,17 +181,19 @@ int getDirection(Snake& snake) {
     }
 }
 
-void addTable(Snake& snake, int dir, int val) {
+void addTable(Snake& snake, int dir1, int dir2) {
     int half = BRAIN_SEE / 2;
-    for (int dx = -half; dx <= half; ++dx) {
-        for (int dy = -half; dy <= half; ++dy) {
+    for (int dy = -half; dy <= half; ++dy) {
+        for (int dx = -half; dx <= half; ++dx) {
             if (dx == 0 && dy == 0) {continue;}
             int x = snake.getX() + dx;
             int y = snake.getY() + dy;
             if (!inBounds(x, y) || isBlock[x][y]) {
-                tableBlock[dx + half][dy + half].correct(dir, val);
+                tableBlock[dx + half][dy + half].correct(dir1, 1);
+                tableBlock[dx + half][dy + half].correct(dir2, -1);
             } else if (isFruit[x][y]) {
-                tableFruits[dx + half][dy + half].correct(dir, val);
+                tableFruits[dx + half][dy + half].correct(dir1, 1);
+                tableFruits[dx + half][dy + half].correct(dir2, -1);
             }
         }
     }
